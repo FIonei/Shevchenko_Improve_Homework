@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="rectangles_size">100dp</dimen>
+    <dimen name="button1_marginTop">40dp</dimen>
+    <dimen name="port_text_marginTop">50dp</dimen>
+    <dimen name="land_text_marginTop">8dp</dimen>
+    <dimen name="picture_size">200dp</dimen>
+    <dimen name="picture_land_size">200dp</dimen>
+    <dimen name="little_margin">8dp</dimen>
+    <dimen name="double_little_margin">16dp</dimen>
+    <dimen name="big_margin">100dp</dimen>
+    <dimen name="button_margin">20dp</dimen>
+    <dimen name="button_width">200dp</dimen>
+    <dimen name="button_height">75dp</dimen>
+    <dimen name="corner_radius">7dp</dimen>
+    <dimen name="rectangle_size">40dp</dimen>
+    <dimen name="rectangles_sizes">60dp</dimen>
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/picture_for9"
+    android:orientation="vertical"
+    tools:context=".Activity2">
+
+    <ImageView
+        android:id="@+id/Image"
+        android:layout_width="@dimen/rectangles_size"
+        android:layout_height="@dimen/rectangles_size"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/rectangles_size"
+        android:src="@drawable/rectangles"
+        tools:ignore="ContentDescription"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/backButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/button1_marginTop"
+        android:background="@drawable/button_state_list"
+        android:text="@string/buttonNameScreen2" />
+</LinearLayout>
