@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="horizontal_margin">64dp</dimen>
-    <dimen name="vertical_margin">32dp</dimen>
-    <dimen name="text_size">32sp</dimen>
-    <dimen name="scroll_height">300dp</dimen>
-    <dimen name="margin_top">20dp</dimen>
-    <dimen name="margin_bottom">20dp</dimen>
-</resources>
