@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">lesson_3</string>
+    <string name="btn1">Перейти на Constraint</string>
+    <string name="btn2">Перейти на NotConstraint</string>
+    <string name="bar_name">Личный кабинет</string>
+    <string name="edit">edit</string>
+    <string name="row1_name">Имя</string>
+    <string name="row1_text">Анастасия</string>
+    <string name="row2_name">Фамилия</string>
+    <string name="row2_text">Антонина</string>
+    <string name="row3_name">E-mail</string>
+    <string name="row3_text">anykee.box@gmail.ru</string>
+    <string name="row4_name">Логин</string>
+    <string name="row4_text">HIE023UOI88</string>
+    <string name="row5_name">Ваш регион</string>
+    <string name="row5_text">Санкт-петербург</string>
+    <string name="head_text">Личные данные</string>
+    <string name="exit_text">Выйти из аккаунта</string>
+    <string name="toolbar_title">Личный профиль</string>
+    <string name="worker_card_text">Карта №7898769
+        |Специалист</string>
+    <string name="toast_edit">Изменить город</string>
+    <string name="toast_exit">Выход</string>
+    <string name="toast_back">Вернуться на предыдущий экран</string>
+    <string name="toast_edit_profile">Редактировать профиль</string>
+</resources>

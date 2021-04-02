@@ -1,0 +1,8 @@
+com/example/lesson_4/databinding/ActivityMainBinding.java
+ com.example.lesson_4.databinding.ActivityMainBinding
+com/example/lesson_4/BuildConfig.java
+ com.example.lesson_4.BuildConfig
+com/example/lesson_4/databinding/BaseInfoItemBinding.java
+ com.example.lesson_4.databinding.BaseInfoItemBinding
+com/example/lesson_4/databinding/DetailInfoItemBinding.java
+ com.example.lesson_4.databinding.DetailInfoItemBinding

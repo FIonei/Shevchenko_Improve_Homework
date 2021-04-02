@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "D:\\Shevchenko_Improve_Homework\\lesson_4\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\detail_info_item.xml",
+        "source": "D:\\Shevchenko_Improve_Homework\\lesson_4\\app\\src\\main\\res\\layout\\detail_info_item.xml"
+    },
+    {
+        "merged": "D:\\Shevchenko_Improve_Homework\\lesson_4\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "D:\\Shevchenko_Improve_Homework\\lesson_4\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\Shevchenko_Improve_Homework\\lesson_4\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\base_info_item.xml",
+        "source": "D:\\Shevchenko_Improve_Homework\\lesson_4\\app\\src\\main\\res\\layout\\base_info_item.xml"
+    },
+    {
+        "merged": "D:\\Shevchenko_Improve_Homework\\lesson_4\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\one_detail_info_item.xml",
+        "source": "D:\\Shevchenko_Improve_Homework\\lesson_4\\app\\src\\main\\res\\layout\\one_detail_info_item.xml"
+    }
+]
