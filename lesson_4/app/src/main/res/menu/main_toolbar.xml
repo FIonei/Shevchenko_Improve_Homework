@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/toolbar_info"
+        android:icon="@drawable/ic_info"
+        android:title="Информация"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/toolbar_toast"
+        android:icon="@drawable/ic_home"
+        android:title="тост"
+        app:showAsAction="always"/>
+</menu>
