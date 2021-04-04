@@ -5,17 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:isScrollContainer="true"
-    android:overScrollMode="always"
-    android:scrollbars="vertical"
-    app:layout_scrollFlags="scroll"
     tools:context=".ConstraintActivity">
 
     <include
         android:id="@+id/titleBar"
-        layout="@layout/title"
+        layout="@layout/title_constraint"
         android:layout_width="match_parent"
-        android:layout_height="201dp">
+        android:layout_height="@dimen/title_height">
     </include>
 
     <ScrollView
@@ -32,8 +28,8 @@
                 android:id="@+id/imageExit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="29dp"
+                android:layout_marginStart="@dimen/base_margin_start"
+                android:layout_marginTop="@dimen/exit_button_marginTop"
                 android:background="?attr/selectableItemBackground"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/row5"
@@ -44,8 +40,8 @@
                 android:id="@+id/textHead"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginStart="@dimen/base_margin_start"
+                android:layout_marginTop="@dimen/text_data_marginTop"
                 android:textColor="@color/squash"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -56,8 +52,8 @@
                 android:id="@+id/exitText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="71dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginStart="@dimen/constraint_exit_text_marginStart"
+                android:layout_marginTop="@dimen/exit_text_marginTop"
                 android:textColor="@color/greyish_brown"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"

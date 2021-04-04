@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="360dp"
-    android:layout_height="201dp"
+    android:layout_width="@dimen/title_width"
+    android:layout_height="@dimen/title_height"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/sunflower">
     <ImageButton
         tools:ignore="ContentDescription"
         android:id="@+id/titleBack"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
+        android:layout_width="@dimen/image_width"
+        android:layout_height="@dimen/image_height"
         android:src="@drawable/ic_arrow_back_black_24_px"
         android:background="?attr/selectableItemBackground"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp">
+        android:layout_marginStart="@dimen/base_margin_start"
+        android:layout_marginTop="@dimen/image_marginTop">
     </ImageButton>
     <TextView
         android:id="@+id/titleText"
@@ -21,29 +21,29 @@
         android:layout_height="wrap_content"
         android:text="Личный профиль"
         android:textColor="@color/greyish_brown"
-        android:layout_marginStart="71dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="@dimen/title_text_marginStart"
+        android:layout_marginTop="@dimen/title_text_marginTop"
         android:textSize="20sp"
         >
     </TextView>
     <ImageButton
         tools:ignore="ContentDescription"
         android:id="@+id/title_edit"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
+        android:layout_width="@dimen/image_width"
+        android:layout_height="@dimen/image_height"
         android:layout_gravity="end"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginEnd="@dimen/image_marginEnd"
+        android:layout_marginTop="@dimen/image_marginTop"
         android:src="@drawable/ic_edit_black_24_px"
         android:background="?attr/selectableItemBackground">
     </ImageButton>
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="56dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginBottom="17dp"
-            android:layout_marginEnd="15dp"
+            android:layout_marginTop="@dimen/worker_marginTop"
+            android:layout_marginStart="@dimen/base_margin_start"
+            android:layout_marginBottom="@dimen/worker_marginBottom"
+            android:layout_marginEnd="@dimen/worker_marginEnd"
             android:background="@color/white">
 
             <ImageView
@@ -51,19 +51,18 @@
                 android:id="@+id/imageWorker"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginStart="@dimen/base_margin_start"
+                android:layout_marginTop="@dimen/worker_image_margin"
+                android:layout_marginBottom="@dimen/worker_image_margin"
                 android:src="@mipmap/img_profile_spechialist"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:scaleType="center" />
-
             <TextView
                 android:id="@+id/textWorker"
                 android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:layout_marginStart="18dp"
+                android:layout_height="@dimen/worker_text_height"
+                android:layout_marginStart="@dimen/worker_text_marginStart"
                 android:textColor="@color/greyish_brown"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@id/imageWorker"

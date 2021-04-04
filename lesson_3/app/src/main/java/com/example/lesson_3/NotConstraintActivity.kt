@@ -14,17 +14,21 @@ class NotConstraintActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityNotConstraintBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        initViews()
+        initActivityObjects()
     }
 
-    private fun initViews() {
+    private fun initActivityObjects() {
         initTitle()
+        initRows()
+        initMain()
+    }
+
+    private fun initRows() {
         initRow1()
         initRow2()
         initRow3()
         initRow4()
         initRow5()
-        initMain()
     }
 
     private fun initRow1() {
