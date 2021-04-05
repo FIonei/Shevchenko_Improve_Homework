@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">lesson_4</string>
+    <string name="dialog_text">В данном окне выводится информация по нажатию на знак вопроса</string>
 </resources>
