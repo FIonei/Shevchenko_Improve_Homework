@@ -10,7 +10,8 @@ import com.google.android.material.snackbar.Snackbar
 class Activity3 : AppCompatActivity() {
     private lateinit var binding: Activity3Binding
     private val TAKE_SNACK_TEXT: Int = 0
-    var text: String? = ""
+    private val NAME_OF_TEXT = getString(R.string.key_for_intent)
+    var text: String = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = Activity3Binding.inflate(layoutInflater)
@@ -32,13 +33,13 @@ class Activity3 : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        if (text != "") Snackbar.make(binding.root, text.toString(), Snackbar.LENGTH_LONG).show()
+        if (text != "") Snackbar.make(binding.root, text, Snackbar.LENGTH_LONG).show()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if ((requestCode == TAKE_SNACK_TEXT) && (resultCode == RESULT_OK)) {
-            text = data!!.getStringExtra("text5")
+            text = data!!.getStringExtra(NAME_OF_TEXT).toString()
         }
     }
 }

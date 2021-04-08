@@ -9,7 +9,7 @@ import java.util.*
 
 class Activity4 : AppCompatActivity() {
     private lateinit var binding: Activity4Binding
-    private val pattern = "dd.MM.yyyy HH:mm:ss"
+    private val pattern = getString(R.string.pattern_of_data)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = Activity4Binding.inflate(layoutInflater)

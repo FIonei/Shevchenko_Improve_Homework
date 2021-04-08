@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">shevchenko_lesson_5</string>
+    <string name="key_for_intent">text5</string>
+    <string name="pattern_of_data">dd.MM.yyyy HH:mm:ss</string>
+    <string name="key_text">TextView</string>
+    <string name="key_edit">EditText</string>
+    <string name="to_4">go to 4</string>
+    <string name="to_2">go to 2</string>
+    <string name="to_3">go to 3</string>
+    <string name="to_5">go to 5</string>
+    <string name="to_1">go to 1</string>
+    <string name="delivery">deliver result</string>
+    <string name="save">Сохранить</string>
+    <string name="to_4_again">go to 4 again</string>
+    <string name="date_example">08.01.2020 12:01:59</string>
 </resources>

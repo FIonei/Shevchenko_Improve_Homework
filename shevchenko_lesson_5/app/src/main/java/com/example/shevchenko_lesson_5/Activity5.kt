@@ -6,9 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.shevchenko_lesson_5.databinding.Activity5Binding
 
 class Activity5 : AppCompatActivity() {
-    private val NAME_OF_TEXT = "text5"
-    private val STATE_KEY_TEXT = "TextView"
-    private val STATE_KEY_EDIT = "EditText"
+    private val NAME_OF_TEXT = getString(R.string.key_for_intent)
+    private val STATE_KEY_TEXT = getString(R.string.key_text)
+    private val STATE_KEY_EDIT = getString(R.string.key_edit)
     private lateinit var binding: Activity5Binding
     private val inputtedText: Data = Data()
 
@@ -18,9 +18,7 @@ class Activity5 : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         if (inputtedText.isValueEmpty().not()) {
-            var text = ""
-            for (value in inputtedText.getAllValue()) text += value!!
-            binding.inputEditText.setText(text)
+            binding.inputEditText.setText(inputtedText.getAllValue())
         }
         binding.button5To3.setOnClickListener { goToActivity3() }
         binding.saveButton.setOnClickListener { saveText() }
@@ -30,18 +28,21 @@ class Activity5 : AppCompatActivity() {
         if (binding.inputEditText.text.toString() == "") return
         else {
             inputtedText.setValue(binding.inputEditText.text.toString())
-            if (inputtedText.isValueEmpty().not()) {
-                var allText: String = binding.outputTextView.text.toString()
-                for (string in inputtedText.getAllValue()) allText += string!!
-                binding.outputTextView.text = allText
-            }
+            binding.outputTextView.text = inputtedText.getAllValue()
         }
+        binding.inputEditText.setText("")
     }
 
     override fun onSaveInstanceState(savedInstanceState: Bundle) {
         savedInstanceState.putString(STATE_KEY_EDIT, binding.inputEditText.text.toString())
         savedInstanceState.putString(STATE_KEY_TEXT, binding.outputTextView.text.toString())
         super.onSaveInstanceState(savedInstanceState)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        binding.inputEditText.setText(savedInstanceState.getString(STATE_KEY_EDIT))
+        binding.outputTextView.text = savedInstanceState.getString(STATE_KEY_TEXT)
     }
 
     private fun goToActivity3() {
