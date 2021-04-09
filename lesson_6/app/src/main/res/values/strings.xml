@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">lesson_6</string>
+    <string name="search">search</string>
+    <string name="nav_search">nav search</string>
+    <string name="cat">кошка</string>
+    <string name="dog">собака</string>
+    <string name="chiken">петух</string>
+    <string name="show">Показать баннер</string>
+    <string name="lamp">lamp</string>
+    <string name="Fragment_1">Фрагмент 1</string>
+    <string name="item_one">item_one</string>
+    <string name="item_two">item_two</string>
+    <string name="item_three">item_three</string>
+    <string name="hide">Свернуть баннер</string>
+    <string name="edit_hint">35</string>
+    <string name="water_example">Холодная вода</string>
+    <string name="numbers_example">54656553</string>
+    <string name="bottom_example">Необходимо подать показания до 25.03.18</string>
+    <string name="newNumbers">Новые показания</string>
+    <string name="image_1_example">Картинка 1</string>
+</resources>
