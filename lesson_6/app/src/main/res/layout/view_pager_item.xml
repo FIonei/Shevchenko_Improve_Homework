@@ -16,7 +16,7 @@
         tools:src="@drawable/img_1" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/imageName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/image_name_marginTop27"
