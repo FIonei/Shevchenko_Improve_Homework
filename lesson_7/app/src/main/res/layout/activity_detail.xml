@@ -8,23 +8,23 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
-        app:title="@string/wtf_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
         android:background="@android:color/transparent"
-        android:elevation="2dp" />
+        android:elevation="@dimen/elevation2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/wtf_title" />
 
     <ImageView
         android:id="@+id/detailImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:elevation="@dimen/elevation0"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img"
-        android:elevation="0dp"/>
+        app:srcCompat="@drawable/img" />
 
     <LinearLayout
         android:id="@+id/item"
@@ -34,7 +34,7 @@
         app:layout_constraintTop_toBottomOf="@id/detailImage">
 
         <ImageView
-           android:id="@+id/bridgeImage"
+            android:id="@+id/bridgeImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/marginStart16"
@@ -56,7 +56,7 @@
                 android:id="@+id/bridgeName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#de000000"
+                android:textColor="@color/black_87"
                 android:textSize="16sp"
                 tools:text="Александра Невского" />
 
@@ -64,7 +64,7 @@
                 android:id="@+id/bridgeTime"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#6e6e6e"
+                android:textColor="@color/black_54"
                 android:textSize="14sp"
                 tools:text="2:20 – 5:10" />
         </LinearLayout>
@@ -74,8 +74,10 @@
         android:id="@+id/bridgeCommentary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="14sp"
         android:layout_marginStart="@dimen/marginStart16"
-        android:layout_marginEnd="17dp"
+        android:layout_marginEnd="@dimen/marginEnd17"
+        android:textColor="@color/brownish_grey_two"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/item"

@@ -29,13 +29,13 @@
             android:id="@+id/bridgeName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#de000000"
+            android:textColor="@color/black_87"
             android:textSize="16sp"
             tools:text="Александра Невского" />
 
         <TextView
             android:id="@+id/bridgeTime"
-            android:textColor="#6e6e6e"
+            android:textColor="@color/brownish_grey_two"
             android:textSize="14sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

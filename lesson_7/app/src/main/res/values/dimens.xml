@@ -3,4 +3,7 @@
     <dimen name="marginStart16">16dp</dimen>
     <dimen name="marginBottom16">16dp</dimen>
     <dimen name="marginTop16">16dp</dimen>
+    <dimen name="elevation2">2dp</dimen>
+    <dimen name="elevation0">0dp</dimen>
+    <dimen name="marginEnd17">17dp</dimen>
 </resources>
