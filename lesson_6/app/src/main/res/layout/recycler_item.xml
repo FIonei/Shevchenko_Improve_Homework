@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:minWidth="@dimen/recycler_item_width"
+    android:layout_height="@dimen/recycler_item_height"
+    android:layout_marginTop="4dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="3dp"
+    android:background="@color/white">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="@dimen/edit_width"
+        android:layout_height="@dimen/edit_height"
+        android:hint="@string/edit_hint"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <ImageButton
+        android:id="@+id/infoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTop10"
+        android:layout_marginEnd="@dimen/marginEnd20"
+        android:background="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/dotsButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_info_24" />
+
+    <ImageButton
+        android:id="@+id/dotsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTop10"
+        android:layout_marginEnd="@dimen/marginEnd16"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_more" />
+
+    <ImageButton
+        android:id="@+id/sendButton"
+        android:layout_width="@dimen/button_size"
+        android:layout_height="@dimen/button_size"
+        android:background="@color/tealish_two"
+        app:layout_constraintBottom_toBottomOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editText"
+        app:layout_constraintTop_toTopOf="@+id/editText"
+        app:srcCompat="@drawable/ic_send" />
+
+    <ImageView
+        android:id="@+id/water"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStart20"
+        android:layout_marginTop="@dimen/marginTop28"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_water_cold" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/itemNumber"
+        app:layout_constraintStart_toStartOf="@+id/itemName"
+        app:layout_constraintTop_toTopOf="@+id/itemNumber"
+        app:srcCompat="@drawable/ic_serial_number" />
+
+    <ImageView
+        android:id="@+id/imageAlert"
+        android:layout_width="@dimen/small_size"
+        android:layout_height="@dimen/small_size"
+        app:layout_constraintBottom_toBottomOf="@+id/commentary"
+        app:layout_constraintStart_toStartOf="@+id/editText"
+        app:layout_constraintTop_toTopOf="@+id/commentary"
+        app:srcCompat="@drawable/ic_alert" />
+
+    <TextView
+        android:id="@+id/itemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStart16"
+        android:layout_marginTop="@dimen/marginTop20"
+        android:textSize="@dimen/big_text_size"
+        android:textColor="@color/charcoal_grey"
+        app:layout_constraintStart_toEndOf="@+id/water"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/water_example" />
+
+    <TextView
+        android:id="@+id/itemNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTop8"
+        android:textSize="@dimen/small_text_size"
+        android:textColor="@color/greyish_brown_three"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/itemName"
+        tools:text="@string/numbers_example" />
+
+    <TextView
+        android:id="@+id/commentary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/coral"
+        android:textSize="@dimen/very_small_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageAlert"
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_goneMarginLeft="@dimen/gone_marginLeft16"
+        tools:text="@string/bottom_example" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTop20"
+        android:text="@string/newNumbers"
+        android:textSize="@dimen/very_small_text_size"
+        android:textColor="@color/warm_grey_two"
+        app:layout_constraintStart_toStartOf="@+id/water"
+        app:layout_constraintTop_toBottomOf="@+id/itemNumber" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

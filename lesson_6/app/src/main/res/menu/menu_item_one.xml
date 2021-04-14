@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/app_bar_search"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:titleCondensed="лупа"
+        android:onClick="onMenuItemClick"
+        android:title="@string/search"
+        app:showAsAction="ifRoom" />
+    <group>
+        <item
+            android:id="@+id/item_1"
+            android:title="@string/cat"
+            android:onClick="onMenuItemClick"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/item_2"
+            android:title="@string/dog"
+            android:onClick="onMenuItemClick"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/item_3"
+            android:title="@string/chiken"
+            android:onClick="onMenuItemClick"
+            app:showAsAction="never" />
+    </group>
+
+</menu>
