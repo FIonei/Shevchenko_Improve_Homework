@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStart39"
+        android:layout_marginTop="@dimen/marginTop21"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/color_title"
+        android:textColor="@color/black_87"
+        android:textSize="@dimen/titleSize20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStart29"
+        android:layout_marginTop="@dimen/marginTop38"
+        android:layout_marginEnd="@dimen/marginEnd29"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title">
+
+        <ImageView
+            android:id="@+id/oval_00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/oval"
+            android:backgroundTint="@color/lipstick"
+            android:tag="@string/lipstick" />
+
+        <ImageView
+            android:id="@+id/oval_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginStart10"
+            android:background="@drawable/oval"
+            android:backgroundTint="@color/lipstick_two"
+            android:tag="@string/lipstick_two" />
+
+        <ImageView
+            android:id="@+id/oval_02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginStart10"
+            android:background="@drawable/oval"
+            android:backgroundTint="@color/barney"
+            android:tag="@string/barney" />
+
+        <ImageView
+            android:id="@+id/oval_03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginStart10"
+            android:background="@drawable/oval"
+            android:backgroundTint="@color/blue_purple"
+            android:tag="@string/blue_purple" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStart29"
+        android:layout_marginTop="@dimen/marginTop10"
+        android:layout_marginEnd="@dimen/marginEnd29"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line1">
+
+        <ImageView
+            android:id="@+id/oval_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/oval"
+            android:backgroundTint="@color/lightish_blue"
+            android:tag="@string/lightish_blue" />
+
+        <ImageView
+            android:id="@+id/oval_11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginStart10"
+            android:background="@drawable/oval"
+            android:backgroundTint="@color/azure"
+            android:tag="@string/azure" />
+
+        <ImageView
+            android:id="@+id/oval_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginStart10"
+            android:background="@drawable/oval"
+            android:backgroundTint="@color/turquoise_blue"
+            android:tag="@string/turquoise_blue" />
+
+        <ImageView
+            android:id="@+id/oval_13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginStart10"
+            android:background="@drawable/oval"
+            android:backgroundTint="@color/teal"
+            android:tag="@string/teal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStart29"
+        android:layout_marginTop="@dimen/marginTop10"
+        android:layout_marginEnd="@dimen/marginEnd29"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line2">
+
+        <ImageView
+            android:id="@+id/oval_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/oval"
+            android:backgroundTint="@color/booger"
+            android:tag="@string/booger" />
+
+        <ImageView
+            android:id="@+id/oval_21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginStart10"
+            android:background="@drawable/oval"
+            android:backgroundTint="@color/sickly_yellow"
+            android:tag="@string/sickly_yellow" />
+
+        <ImageView
+            android:id="@+id/oval_22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginStart10"
+            android:background="@drawable/oval"
+            android:backgroundTint="@color/sunshine_yellow"
+            android:tag="@string/sunshine_yellow" />
+
+        <ImageView
+            android:id="@+id/oval_23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginStart10"
+            android:background="@drawable/oval"
+            android:backgroundTint="@color/marigold"
+            android:tag="@string/marigold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStart29"
+        android:layout_marginTop="@dimen/marginTop10"
+        android:layout_marginEnd="@dimen/marginEnd29"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line3">
+
+        <ImageView
+            android:id="@+id/oval_30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/oval"
+            android:backgroundTint="@color/orange_red"
+            android:tag="@string/orange_red" />
+
+        <ImageView
+            android:id="@+id/oval_31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginStart10"
+            android:background="@drawable/oval"
+            android:backgroundTint="@color/warm_grey_five"
+            android:tag="@string/warm_grey_five" />
+
+        <ImageView
+            android:id="@+id/oval_32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginStart10"
+            android:background="@drawable/oval"
+            android:backgroundTint="@color/blue_grey"
+            android:tag="@string/blue_grey" />
+
+        <ImageView
+            android:id="@+id/oval_33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginStart10"
+            android:background="@drawable/oval"
+            android:backgroundTint="@color/white"
+            android:tag="@string/white" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTop28"
+        android:layout_marginEnd="@dimen/marginEnd8"
+        android:layout_marginBottom="@dimen/marginBottom8"
+        android:background="@android:color/transparent"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_horizontal"
+        android:letterSpacing="0.04"
+        android:text="@string/cancel_button"
+        android:textColor="#009688"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line4" />
+
+    <Button
+        android:id="@+id/access_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStart8"
+        android:background="@android:color/transparent"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_horizontal"
+        android:letterSpacing="0.04"
+        android:text="@string/access_button"
+        android:textColor="#009688"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cancel_button" />
+</androidx.constraintlayout.widget.ConstraintLayout>

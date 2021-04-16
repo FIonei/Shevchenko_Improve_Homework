@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">lesson_8</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="text_example">Текст заметки</string>
+    <string name="title_example">Название</string>
+    <string name="search">search</string>
+    <string name="color">change_color</string>
+    <string name="main_title">Заметки</string>
+    <string name="wtf_title">123</string>
+    <string name="alert_title">Удаление заметки</string>
+    <string name="alert_positive">Архивировать</string>
+    <string name="alert_negative">Удалить</string>
+    <string name="exception_not_null_activity">Activity cannot be null</string>
+    <string name="alert_message">Архивация позволит восстановить заметку позже</string>
+    <string name="cancel_button">ОТМЕНА</string>
+    <string name="access_button">Сохранить цвет</string>
+    <string name="color_title">Выбор цвета</string>
+    <string name="lipstick">lipstick</string>
+    <string name="lipstick_two">lipstick_two</string>
+    <string name="barney">barney</string>
+    <string name="blue_purple">blue_purple</string>
+    <string name="lightish_blue">lightish_blue</string>
+    <string name="azure">azure</string>
+    <string name="turquoise_blue">turquoise_blue</string>
+    <string name="teal">teal</string>
+    <string name="booger">booger</string>
+    <string name="sickly_yellow">sickly_yellow</string>
+    <string name="sunshine_yellow">sunshine_yellow</string>
+    <string name="marigold">marigold</string>
+    <string name="orange_red">orange_red</string>
+    <string name="warm_grey_five">warm_grey_five</string>
+    <string name="blue_grey">blue_grey</string>
+    <string name="white">white</string>
+    <string name="dialog_tag">myDialog</string>
+    <string name="color_dialog_tag">colorDialog</string>
+</resources>
