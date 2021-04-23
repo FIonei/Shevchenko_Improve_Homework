@@ -6,10 +6,10 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ItemDecoration
 
 class SpaceItemDecoration(
-    private val left: Int = R.dimen.decoration_space,
-    private val right: Int = R.dimen.decoration_space,
-    private val top: Int = R.dimen.decoration_space,
-    private val bottom: Int = R.dimen.decoration_space
+    private val left: Int,
+    private val right: Int,
+    private val top: Int,
+    private val bottom: Int
 ) : ItemDecoration() {
     constructor(offset: Int) : this(offset, offset, offset, offset)
 

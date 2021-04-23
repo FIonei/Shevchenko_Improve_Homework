@@ -14,7 +14,7 @@
     <dimen name="recyclerMarginEnd4">4dp</dimen>
     <dimen name="recyclerMarginTop6">6dp</dimen>
     <dimen name="recyclerMarginBottom6">6dp</dimen>
-    <dimen name="decoration_space">8dp</dimen>
+    <dimen name="decoration_space">4dp</dimen>
     <dimen name="request_code">1</dimen>
     <dimen name="textSIze14">14sp</dimen>
     <dimen name="marginStart29">29dp</dimen>

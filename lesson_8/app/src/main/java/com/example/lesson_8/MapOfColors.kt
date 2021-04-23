@@ -18,12 +18,9 @@ data class MapOfColors(
         "warm_grey_five" to R.color.warm_grey_five,
         "blue_grey" to R.color.blue_grey,
         "white" to R.color.white
-    ),
-    private var color: String = "white"
+    )
 ) {
-    fun getColor(str: String): Int = map.getValue(str)
-    fun getCurrentColor(): String = color
-    fun setCurrentColor(color: String) {
-        this.color = color
+    fun getColor(str: String): Int {
+        return map.getValue(str)
     }
 }

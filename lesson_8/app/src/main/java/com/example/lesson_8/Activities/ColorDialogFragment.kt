@@ -1,20 +1,26 @@
 package com.example.lesson_8.Activities
 
 import android.app.Dialog
+import android.content.Context.MODE_PRIVATE
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View.VISIBLE
 import android.widget.ImageView
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
-import com.example.lesson_8.MapOfColors
 import com.example.lesson_8.R
 import com.example.lesson_8.databinding.ColorDialogBinding
 
-class ColorDialogFragment (color: String): DialogFragment() {
+
+class ColorDialogFragment() : DialogFragment() {
     private lateinit var binding: ColorDialogBinding
-    private var currentColor: String = color
-    private var savedColor: String = currentColor
+    private var currentColor: String = "white"
+    val APP_PREFERENCES = "mysettings"
+    val APP_PREFERENCES_COLOR = "CurrentColor"
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
+        val prefs: SharedPreferences? = context?.getSharedPreferences(APP_PREFERENCES, MODE_PRIVATE)
+        currentColor = prefs?.getString(APP_PREFERENCES_COLOR, "white") ?: "white"
+
         return activity?.let {
             val builder = AlertDialog.Builder(it)
             binding = ColorDialogBinding.inflate(layoutInflater)
@@ -22,13 +28,12 @@ class ColorDialogFragment (color: String): DialogFragment() {
             binding.cancelButton.setOnClickListener { cancel() }
             binding.accessButton.setOnClickListener { confirm() }
             setColorClickListeners()
-            binding.root.findViewWithTag<ImageView>(currentColor).setImageResource(R.drawable.ic_check)
+            binding.root.findViewWithTag<ImageView>(currentColor)
+                .setImageResource(R.drawable.ic_check)
             builder.create()
         } ?: throw IllegalStateException(getString(R.string.exception_not_null_activity))
     }
 
-    //да, косячно, но иначе только через адаптер, а для этого надо переделывать верстку
-    //TODO подумать над тем, чтобы завернуть всё в gridView, с добавлением адаптера и прочее и прочее...
     private fun setColorClickListeners() {
         binding.oval00.setOnClickListener { chooseColor(binding.oval00) }
         binding.oval01.setOnClickListener { chooseColor(binding.oval01) }
@@ -49,18 +54,19 @@ class ColorDialogFragment (color: String): DialogFragment() {
     }
 
     private fun confirm() {
-        savedColor = currentColor
-        MapOfColors(color = currentColor)
+        val editor = context?.getSharedPreferences(APP_PREFERENCES, MODE_PRIVATE)?.edit()
+        editor?.putString(APP_PREFERENCES_COLOR, currentColor)
+        editor?.apply()
         dismiss()
     }
 
     private fun cancel() {
-        currentColor = savedColor
         dismiss()
     }
 
-    private fun chooseColor(view: ImageView){
-        binding.root.findViewWithTag<ImageView>(currentColor).setImageResource(android.R.color.transparent)
+    private fun chooseColor(view: ImageView) {
+        binding.root.findViewWithTag<ImageView>(currentColor)
+            .setImageResource(android.R.color.transparent)
         view.setImageResource(R.drawable.ic_check)
         currentColor = view.tag.toString()
         binding.accessButton.visibility = VISIBLE

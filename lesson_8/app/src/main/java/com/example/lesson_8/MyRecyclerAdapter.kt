@@ -5,12 +5,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.View.GONE
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.core.content.ContextCompat.getColor
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lesson_8.Room.NoteEntity
 
 class MyRecyclerAdapter internal constructor(context: Context?, data: List<NoteEntity?>?) :
     RecyclerView.Adapter<MyRecyclerAdapter.ViewHolder>() {
+    private val context = context!!
     private val mData: List<NoteEntity?>?
     private val mInflater: LayoutInflater
     private var mClickListener: ItemClickListener? = null
@@ -30,7 +33,14 @@ class MyRecyclerAdapter internal constructor(context: Context?, data: List<NoteE
         if (item!!.title != null) holder.title.text = item.title
         else holder.title.visibility = GONE
         holder.text.text = item.text
-        //TODO Добавить изменение цвета закладок
+        if (item.color == context.getString(R.string.white)) {
+            holder.title.setTextColor(context.resources.getColor(R.color.black_87))
+            holder.text.setTextColor(context.resources.getColor(R.color.warm_grey_three))
+        } else {
+            holder.title.setTextColor(context.resources.getColor(R.color.white))
+            holder.text.setTextColor(context.resources.getColor(R.color.white))
+        }
+        holder.back.setBackgroundColor(getColor(context, MapOfColors().getColor(item.color!!)))
     }
 
     override fun getItemCount(): Int {
@@ -41,6 +51,7 @@ class MyRecyclerAdapter internal constructor(context: Context?, data: List<NoteE
         View.OnClickListener, View.OnLongClickListener {
         var title: TextView
         var text: TextView
+        var back: LinearLayout
         override fun onClick(view: View?) {
             if (mClickListener != null) mClickListener!!.onItemClick(view, adapterPosition)
         }
@@ -53,6 +64,7 @@ class MyRecyclerAdapter internal constructor(context: Context?, data: List<NoteE
         init {
             title = itemView.findViewById(R.id.title)
             text = itemView.findViewById(R.id.text)
+            back = itemView.findViewById(R.id.back)
             itemView.setOnClickListener(this)
             itemView.setOnLongClickListener(this)
         }

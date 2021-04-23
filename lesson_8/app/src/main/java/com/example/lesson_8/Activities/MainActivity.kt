@@ -21,18 +21,18 @@ class MainActivity : AppCompatActivity() {
     private val REQUEST_CODE: Int = 0
     var list: List<NoteEntity?>? = listOf()
     lateinit var db: NoteDatabase
-    private lateinit var noteDao: NoteDao
+    lateinit var noteDao: NoteDao
 
     override fun onCreate(savedInstanceState: Bundle?) {
         db = databaseBuilder(
-                applicationContext,
-        NoteDatabase::class.java, "Notes"
+            applicationContext,
+            NoteDatabase::class.java, "Notes"
         )
-            .allowMainThreadQueries()//заменить на корутины
+            .allowMainThreadQueries()//TODO: заменить на корутины
             .build()
         noteDao = db.noteDao()
         //пример добавления записи в БД
-        //noteDao.insert(NoteEntity(id = 1, title = "заметка №1", text = "что-то там написано про 1", color = getString(R.string.marigold), isArched = 0))
+        //noteDao.insert(NoteEntity(title = "заметка №1", text = "что-то там написано про 1", color = getString(R.string.marigold), isArched = 0))
         binding = ActivityMainBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
@@ -42,26 +42,34 @@ class MainActivity : AppCompatActivity() {
 
         val recycler = binding.recycler
         recycler.layoutManager = StaggeredGridLayoutManager(2, VERTICAL)
-        recycler.addItemDecoration(SpaceItemDecoration(8)) //TODO придумать что-то с этими разделителями, dp почему-то не отображаются
+        recycler.addItemDecoration(SpaceItemDecoration(resources.getDimensionPixelSize(R.dimen.decoration_space)))
 
+        recycler.adapter = createAdapter(list)
+        binding.fab.setOnClickListener { _ -> createNewNote() }
+        binding.fab.setOnLongClickListener { _ -> update() }
+    }
+
+    private fun update(): Boolean{
+        list = noteDao.getAllVisible()
+        binding.recycler.adapter = createAdapter(list)
+        return true
+    }
+    private fun createAdapter(list: List<NoteEntity?>?): MyRecyclerAdapter{
         val adapter = MyRecyclerAdapter(this, list)
         adapter.setLongClickListener(object : MyRecyclerAdapter.ItemLongClickListener {
             override fun onItemLongClick(view: View?, position: Int) {
-                openDialog()
+                openDialog(position)
             }
         })
-        recycler.adapter = adapter
-        binding.fab.setOnClickListener { _ -> createNewNote() }
+        return adapter
     }
-
-    private fun openDialog() {
-        val myDialogFragment = MyDialogFragment()
+    private fun openDialog(pos: Int) {
+        val myDialogFragment = MyDialogFragment(this, list!![pos]!!.id)
         val manager = supportFragmentManager
         myDialogFragment.show(manager, getString(R.string.dialog_tag))
     }
 
     private fun createNewNote() {
-        MapOfColors().setCurrentColor(getString(R.string.white))
         val intent = Intent(this@MainActivity, InputActivity::class.java)
         startActivityForResult(intent, REQUEST_CODE)
     }
@@ -82,8 +90,16 @@ class MainActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         if ((requestCode == REQUEST_CODE) && (resultCode == RESULT_OK)) {
             val note = data!!.getParcelableExtra<NoteEntity>(EXTRA_NAME)
-            noteDao.insert(NoteEntity(title = note?.title ?: "", text = note?.text ?: "", color = note?.color ?: getString(R.string.white), isArched = note?.isArched ?: 0))
+            noteDao.insert(
+                NoteEntity(
+                    title = note?.title ?: "",
+                    text = note?.text ?: "",
+                    color = note?.color ?: getString(R.string.white),
+                    isArched = note?.isArched ?: 0
+                )
+            )
         }
+        list = noteDao.getAllVisible()
+        binding.recycler.adapter = createAdapter(list)
     }
-
 }

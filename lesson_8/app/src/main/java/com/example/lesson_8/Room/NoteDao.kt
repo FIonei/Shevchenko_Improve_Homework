@@ -17,9 +17,9 @@ interface NoteDao {
     @Insert
     fun insert(noteEntity: NoteEntity?)
 
-    @Update
-    fun update(noteEntity: NoteEntity?)
+    @Query("UPDATE Notes SET isArched = 1 WHERE id = :id")
+    fun archive(id: Long)
 
-    @Delete
-    fun delete(noteEntity: NoteEntity?)
+    @Query("DELETE FROM Notes WHERE id = :id")
+    fun delete(id: Long)
 }
