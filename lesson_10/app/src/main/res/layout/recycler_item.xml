@@ -14,7 +14,7 @@
         android:layout_marginStart="@dimen/marginStart16"
         android:layout_marginBottom="@dimen/marginBottom16"
         android:layout_marginTop="@dimen/marginTop16"
-        tools:srcCompat="@drawable/ic_brige_normal" />
+        tools:srcCompat="@drawable/ic_bridge_normal" />
 
     <LinearLayout
         android:layout_width="wrap_content"

@@ -2,8 +2,6 @@ package com.example.lesson_10
 
 import android.os.Bundle
 import android.os.Handler
-import android.util.Log
-import androidx.annotation.MainThread
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -14,6 +12,7 @@ import com.google.android.gms.maps.model.MarkerOptions
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
@@ -37,7 +36,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val runnable = Runnable {
             mapFragment.getMapAsync(this)
         }
-        updateHandler.postDelayed(runnable, 2000)
+        updateHandler.postDelayed(runnable, 4000)
     }
 
     private fun downloadText() {
@@ -55,16 +54,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         )
     }
 
-    /**
-     * Manipulates the map once available.
-     * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
-     */
-
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
         val bridges: MutableList<LatLng> = mutableListOf()
@@ -77,5 +66,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             )
         )
         mMap.moveCamera(CameraUpdateFactory.newLatLng(bridges[0]))
+        mMap.setMinZoomPreference(5.0F)
+        mMap.setMaxZoomPreference(20.0F)
     }
 }

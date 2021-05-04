@@ -14,10 +14,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     lateinit var mainAdapter: RecyclerViewAdapter
     lateinit var mService: GetItemsService
-    private val idEx: String = "bridgeId"
-    private val timeEx: String = "bridgeTime"
-    private val longEx: String = "bridgeLongitude"
-    private val latEx: String = "bridgeLatitude"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
