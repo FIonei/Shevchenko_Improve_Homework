@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">lesson_10</string>
+    <string name="title">The MOST SPB</string>
+    <string name="time_format">%1$s – %2$s</string>
+    <string name="text_example">Первый мост на этом месте был построен в 1893—1894 годах по проекту инженера Н. М. Мазурова. Это был двадцатипятипролётный деревянный трапецеидально-подкосный мост длиной 326 м со средним 14-метровым разводным пролётом. Трасса моста пролегала по оси узкого Зоологического переулка. В 1930 и 1937 годах мост расширялся, деревянные пролёты были заменены на металлические.</string>
+    <string name="pattern_of_time">HH:mm</string>
+    <string name="wtf_title">WTF</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="mapButton">Перейти на карту</string>
+</resources>

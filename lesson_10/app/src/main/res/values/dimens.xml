@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="marginStart16">16dp</dimen>
+    <dimen name="marginBottom16">16dp</dimen>
+    <dimen name="marginTop16">16dp</dimen>
+    <dimen name="elevation2">2dp</dimen>
+    <dimen name="elevation0">0dp</dimen>
+    <dimen name="marginEnd17">17dp</dimen>
+    <dimen name="normal_size">16sp</dimen>
+    <dimen name="little_size">14sp</dimen>
+    <dimen name="scroll_size">500dp</dimen>
+    <dimen name="marginBottom10">10dp</dimen>
+</resources>
