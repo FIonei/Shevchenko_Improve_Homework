@@ -1,0 +1,33 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="marginStart18">18dp</dimen>
+    <dimen name="marginTop21">21dp</dimen>
+    <dimen name="marginEnd14">14dp</dimen>
+    <dimen name="marginTop4">4dp</dimen>
+    <dimen name="marginBottom19">19dp</dimen>
+    <dimen name="marginTop35">35dp</dimen>
+    <dimen name="marginStart16">16dp</dimen>
+    <dimen name="marginTop12">12dp</dimen>
+    <dimen name="titleSize20">20sp</dimen>
+    <dimen name="textSize16">16sp</dimen>
+    <dimen name="recyclerMarginStart4">4dp</dimen>
+    <dimen name="recyclerMarginEnd4">4dp</dimen>
+    <dimen name="recyclerMarginTop6">6dp</dimen>
+    <dimen name="recyclerMarginBottom6">6dp</dimen>
+    <dimen name="decoration_space">4dp</dimen>
+    <dimen name="request_code">1</dimen>
+    <dimen name="textSIze14">14sp</dimen>
+    <dimen name="marginStart29">29dp</dimen>
+    <dimen name="marginStart9">9dp</dimen>
+    <dimen name="marginTop38">38dp</dimen>
+    <dimen name="marginStart39">39dp</dimen>
+    <dimen name="marginStart10">10dp</dimen>
+    <dimen name="marginTop10">10dp</dimen>
+    <dimen name="marginTop39">39dp</dimen>
+    <dimen name="marginEnd15">15dp</dimen>
+    <dimen name="marginEnd8">8dp</dimen>
+    <dimen name="marginTop28">28dp</dimen>
+    <dimen name="marginBottom8">8dp</dimen>
+    <dimen name="marginEnd29">29dp</dimen>
+    <dimen name="marginStart8">8dp</dimen>
+</resources>
