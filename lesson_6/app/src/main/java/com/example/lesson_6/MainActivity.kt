@@ -10,26 +10,27 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
-        when (item.itemId) {
-            R.id.item_one -> {
-                val itemOneFragment = ItemOneFragment.newInstance()
-                openFragment(itemOneFragment)
-                return@OnNavigationItemSelectedListener true
+    private val mOnNavigationItemSelectedListener =
+        BottomNavigationView.OnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.item_one -> {
+                    val itemOneFragment = ItemOneFragment.newInstance()
+                    openFragment(itemOneFragment)
+                    return@OnNavigationItemSelectedListener true
+                }
+                R.id.item_two -> {
+                    val itemTwoFragment = ItemTwoFragment.newInstance()
+                    openFragment(itemTwoFragment)
+                    return@OnNavigationItemSelectedListener true
+                }
+                R.id.item_three -> {
+                    val itemThreeFragment = ItemThreeFragment.newInstance()
+                    openFragment(itemThreeFragment)
+                    return@OnNavigationItemSelectedListener true
+                }
             }
-            R.id.item_two -> {
-                val itemTwoFragment = ItemTwoFragment.newInstance()
-                openFragment(itemTwoFragment)
-                return@OnNavigationItemSelectedListener true
-            }
-            R.id.item_three -> {
-                val itemThreeFragment = ItemThreeFragment.newInstance()
-                openFragment(itemThreeFragment)
-                return@OnNavigationItemSelectedListener true
-            }
+            false
         }
-        false
-    }
 
     private fun openFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
@@ -47,7 +48,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onMenuItemClick(item: MenuItem) {
-        val text = "кнопочка '"+item.title+ "' нажата"
+        val text = getString(R.string.toast, item.title)
         Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
     }
 }

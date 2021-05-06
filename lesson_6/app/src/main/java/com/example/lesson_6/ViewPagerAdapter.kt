@@ -9,12 +9,13 @@ import android.widget.TextView
 import androidx.appcompat.content.res.AppCompatResources.getDrawable
 import androidx.recyclerview.widget.RecyclerView
 
-
-class ViewPagerAdapter(_context: Context?, _list: List<PagerItem>) : RecyclerView.Adapter<ViewPagerAdapter.MyViewHolder>() {
+class ViewPagerAdapter(_context: Context?, _list: List<PagerItem>) :
+    RecyclerView.Adapter<ViewPagerAdapter.MyViewHolder>() {
     private val context: Context
     private val list: List<PagerItem>
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val view: View = LayoutInflater.from(context).inflate(R.layout.view_pager_item, parent, false)
+        val view: View =
+            LayoutInflater.from(context).inflate(R.layout.view_pager_item, parent, false)
         return MyViewHolder(view)
     }
 

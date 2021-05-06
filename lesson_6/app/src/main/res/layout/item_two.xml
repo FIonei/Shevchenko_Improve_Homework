@@ -17,7 +17,7 @@
         app:title="@string/item_two"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="@dimen/recycler_marginTop4"
         android:id="@+id/recycler"
         tools:listitem="@layout/recycler_item"
         android:layout_width="match_parent"

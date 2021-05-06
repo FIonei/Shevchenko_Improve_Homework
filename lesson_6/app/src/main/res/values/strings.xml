@@ -18,4 +18,5 @@
     <string name="bottom_example">Необходимо подать показания до 25.03.18</string>
     <string name="newNumbers">Новые показания</string>
     <string name="image_1_example">Картинка 1</string>
+    <string name="toast">кнопка %1$s нажата</string>
 </resources>

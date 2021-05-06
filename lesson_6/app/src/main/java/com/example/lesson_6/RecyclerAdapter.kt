@@ -9,12 +9,13 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 
-class RecyclerAdapter (_items: List<RecyclerItem>) : RecyclerView.Adapter<ItemsHolder>() {
+class RecyclerAdapter(_items: List<RecyclerItem>) : RecyclerView.Adapter<ItemsHolder>() {
 
     val items: List<RecyclerItem> = _items
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemsHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.recycler_item, parent, false)
+        val itemView =
+            LayoutInflater.from(parent.context).inflate(R.layout.recycler_item, parent, false)
         return ItemsHolder(itemView)
     }
 
@@ -22,6 +23,7 @@ class RecyclerAdapter (_items: List<RecyclerItem>) : RecyclerView.Adapter<ItemsH
         val item = items[position]
         holder.bind(item)
     }
+
     override fun getItemCount(): Int = items.count()
 }
 
@@ -36,9 +38,13 @@ class ItemsHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         numberText.text = item.itemNumber.toString()
         if (item.isRedAlert) {
             commentaryText.setTextColor(ContextCompat.getColor(itemView.context, R.color.coral))
-        }
-        else {
-            commentaryText.setTextColor(ContextCompat.getColor(itemView.context, R.color.charcoal_grey))
+        } else {
+            commentaryText.setTextColor(
+                ContextCompat.getColor(
+                    itemView.context,
+                    R.color.charcoal_grey
+                )
+            )
             itemView.findViewById<ImageView>(R.id.imageAlert).visibility = GONE
         }
         commentaryText.text = item.commentary

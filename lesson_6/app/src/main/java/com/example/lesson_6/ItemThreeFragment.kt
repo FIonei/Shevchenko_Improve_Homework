@@ -14,7 +14,11 @@ class ItemThreeFragment : Fragment() {
     private lateinit var button: Button
     private lateinit var pager: ViewPager2
     private val list: List<PagerItem> = PagerRepository().items
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         return inflater.inflate(R.layout.item_three, container, false)
     }
 
@@ -31,14 +35,11 @@ class ItemThreeFragment : Fragment() {
         if (pager.visibility == VISIBLE) {
             pager.visibility = GONE
             button.text = getString(R.string.show)
-        }
-        else {
+        } else {
             pager.visibility = VISIBLE
             button.text = getString(R.string.hide)
         }
     }
-
-
 
     companion object {
         fun newInstance(): ItemThreeFragment = ItemThreeFragment()

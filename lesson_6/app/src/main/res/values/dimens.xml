@@ -25,4 +25,10 @@
     <dimen name="gone_marginLeft16">16dp</dimen>
     <dimen name="very_small_text_size">12sp</dimen>
     <dimen name="image_name_marginTop27">27dp</dimen>
+    <dimen name="pager_marginTop">235dp</dimen>
+    <dimen name="recycler_marginTop4">4dp</dimen>
+    <dimen name="marginTop4">4dp</dimen>
+    <dimen name="marginStart8">8dp</dimen>
+    <dimen name="marginEnd8">8dp</dimen>
+    <dimen name="marginBottom3">3dp</dimen>
 </resources>

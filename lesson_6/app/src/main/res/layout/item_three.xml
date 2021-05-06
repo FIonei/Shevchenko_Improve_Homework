@@ -32,7 +32,7 @@
         android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="235dp"
+        android:layout_marginTop="@dimen/pager_marginTop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/button"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
