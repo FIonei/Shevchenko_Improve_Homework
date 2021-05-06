@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/text_marginStart"
-            android:textSize="16sp"
+            android:textSize="@dimen/normal_textSize"
             android:textStyle="bold"
             tools:text="Охрана" />
 
@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/text_marginStart"
             android:layout_marginBottom="@dimen/text_marginBottom"
-            android:textSize="12sp"
+            android:textSize="@dimen/little_textSize"
             tools:text="Нет" />
     </LinearLayout>
 </LinearLayout>

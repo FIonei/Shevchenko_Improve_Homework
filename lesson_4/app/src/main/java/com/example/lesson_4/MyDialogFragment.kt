@@ -9,12 +9,12 @@ class MyDialogFragment : DialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         return activity?.let {
             val builder = AlertDialog.Builder(it)
-            builder.setTitle("Информация")
+            builder.setTitle(getString(R.string.info_title))
                 .setMessage(R.string.dialog_text)
-                .setPositiveButton("Закрыть окно") { dialog, id ->
+                .setPositiveButton(getString(R.string.close)) { dialog, id ->
                     dialog.cancel()
                 }
             builder.create()
-        } ?: throw IllegalStateException("Activity cannot be null")
+        } ?: throw IllegalStateException(getString(R.string.exception_null))
     }
 }

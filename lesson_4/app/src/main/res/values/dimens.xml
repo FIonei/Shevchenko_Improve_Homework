@@ -6,4 +6,6 @@
     <dimen name="text_marginStart">14dp</dimen>
     <dimen name="text_marginBottom">14dp</dimen>
     <dimen name="image_marginTop">8dp</dimen>
+    <dimen name="normal_textSize">16sp</dimen>
+    <dimen name="little_textSize">12sp</dimen>
 </resources>

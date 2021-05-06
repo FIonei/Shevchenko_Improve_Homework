@@ -14,21 +14,10 @@ import com.google.android.material.snackbar.Snackbar
 
 
 class MainActivity : AppCompatActivity(), RecyclerViewAdapter.ItemClickListener {
-    private val DetailInfoItems = listOf(
-        InfoItem("Квитанции", "- 40 080,55 Р", R.drawable.ic_bill),
-        InfoItem("Счетчики", "Подайте показания", R.drawable.ic_counter),
-        InfoItem("Рассрочка", "Сл. платеж 25.02.2018", R.drawable.ic_installment),
-        InfoItem("Страхование", "Полис до 12.01.2019", R.drawable.ic_insurance),
-        InfoItem("Интернет и ТВ", "Баланс 350 Р", R.drawable.ic_tv),
-        InfoItem("Домофон", "Подключен", R.drawable.ic_homephone),
-        InfoItem("Охрана", "Нет", R.drawable.ic_guard)
-    )
-    private val BaseInfoItems = listOf(
-        InfoItem("Контакты УК и служб", image = R.drawable.ic_uk_contacts),
-        InfoItem("Мои заявки", image = R.drawable.ic_request),
-        InfoItem("Памятка жителя А101", image = R.drawable.ic_about)
-    )
-    private val AllInfoItems = DetailInfoItems + BaseInfoItems
+
+    val detailInfoItems = ItemsRepository().getDetail()
+    val baseInfoItems = ItemsRepository().getBase()
+    private val AllInfoItems = detailInfoItems + baseInfoItems
     private lateinit var binding: ActivityMainBinding
     lateinit var detailAdapter: RecyclerViewAdapter
     lateinit var toolbar: Toolbar
@@ -48,7 +37,7 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.ItemClickListener 
         //хз почему, но тут если элемент последний, то столбец должен быть один, но тут работает наоборот
         gridLayoutManager.spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
             override fun getSpanSize(position: Int): Int {
-                return if ((position >= DetailInfoItems.count() - 1) && (DetailInfoItems.count() % 2 != 0)) 2
+                return if ((position >= detailInfoItems.count() - 1) && (detailInfoItems.count() % 2 != 0)) 2
                 else 1
             }
         }
@@ -61,7 +50,7 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.ItemClickListener 
     }
 
     override fun onItemClick(view: View?, position: Int) {
-        var text = "Выбран элемент: "
+        var text = getString(R.string.on_item_click)
         text += detailAdapter.getItem(position).firstName
         Snackbar.make(binding.root, text, Snackbar.LENGTH_SHORT).show()
     }
@@ -90,12 +79,13 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.ItemClickListener 
     }
 
     private fun doToast() {
-        Toast.makeText(this, "Тост домику", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, getString(R.string.home_toast), Toast.LENGTH_SHORT).show()
     }
 
     private fun doInfo() {
+        val tag = getString(R.string.dialog_tag)
         val myDialogFragment = MyDialogFragment()
         val manager = supportFragmentManager
-        myDialogFragment.show(manager, "myDialog")
+        myDialogFragment.show(manager, tag)
     }
 }
