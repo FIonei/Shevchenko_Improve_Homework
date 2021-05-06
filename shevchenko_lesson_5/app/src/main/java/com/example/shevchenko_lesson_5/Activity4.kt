@@ -9,13 +9,13 @@ import java.util.*
 
 class Activity4 : AppCompatActivity() {
     private lateinit var binding: Activity4Binding
-    private val pattern = getString(R.string.pattern_of_data)
+    private val pattern = "dd.MM.yyyy HH:mm:ss"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = Activity4Binding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        binding.button4To4.setOnClickListener{ onNewIntent(this.intent) }
+        binding.button4To4.setOnClickListener { onNewIntent(this.intent) }
     }
 
     override fun onNewIntent(intent: Intent?) {

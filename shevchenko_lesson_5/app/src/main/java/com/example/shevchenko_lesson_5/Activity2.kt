@@ -12,7 +12,7 @@ class Activity2 : AppCompatActivity() {
         binding = Activity2Binding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        binding.button2To3.setOnClickListener{ goToActivity3() }
+        binding.button2To3.setOnClickListener { goToActivity3() }
     }
 
     private fun goToActivity3() {

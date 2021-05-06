@@ -8,6 +8,7 @@ class Data() : Parcelable {
 
     constructor(parcel: Parcel) : this() {
     }
+
     fun isValueEmpty(): Boolean = (value == "")
 
     fun setValue(text: String?) {
@@ -26,6 +27,7 @@ class Data() : Parcelable {
         override fun createFromParcel(parcel: Parcel): Data {
             return Data(parcel)
         }
+
         override fun newArray(size: Int): Array<Data?> {
             return arrayOfNulls(size)
         }

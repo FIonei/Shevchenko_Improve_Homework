@@ -6,9 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.shevchenko_lesson_5.databinding.Activity5Binding
 
 class Activity5 : AppCompatActivity() {
-    private val NAME_OF_TEXT = getString(R.string.key_for_intent)
-    private val STATE_KEY_TEXT = getString(R.string.key_text)
-    private val STATE_KEY_EDIT = getString(R.string.key_edit)
+    private val NAME_OF_TEXT = "text5"
+    private val STATE_KEY_TEXT = "TextView"
+    private val STATE_KEY_EDIT = "EditText"
     private lateinit var binding: Activity5Binding
     private val inputtedText: Data = Data()
 
@@ -25,7 +25,7 @@ class Activity5 : AppCompatActivity() {
     }
 
     private fun saveText() {
-        if (binding.inputEditText.text.toString() == "") return
+        if (binding.inputEditText.text.isEmpty()) return
         else {
             inputtedText.setValue(binding.inputEditText.text.toString())
             binding.outputTextView.text = inputtedText.getAllValue()

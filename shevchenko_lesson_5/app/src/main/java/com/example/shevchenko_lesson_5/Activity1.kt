@@ -12,8 +12,8 @@ class Activity1 : AppCompatActivity() {
         binding = Activity1Binding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        binding.button1To4.setOnClickListener{ goToActivity4() }
-        binding.button1To2.setOnClickListener{ goToActivity2() }
+        binding.button1To4.setOnClickListener { goToActivity4() }
+        binding.button1To2.setOnClickListener { goToActivity2() }
     }
 
     private fun goToActivity2() {
