@@ -6,7 +6,7 @@ import android.os.Handler
 import android.os.IBinder
 import android.widget.Toast
 
-class BackgroundService: Service() {
+class BoundService: Service() {
     private lateinit var mHandler: Handler
     private lateinit var mRunnable: Runnable
     override fun onBind(intent: Intent?): IBinder? {

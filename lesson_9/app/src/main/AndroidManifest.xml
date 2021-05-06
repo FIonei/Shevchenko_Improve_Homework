@@ -15,7 +15,8 @@
         <service
             android:name=".domain.BoundService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true"
+            android:permission="TODO" />
 
         <activity android:name=".presenter.MainActivity">
             <intent-filter>

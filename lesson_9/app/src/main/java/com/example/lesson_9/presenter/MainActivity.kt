@@ -10,14 +10,15 @@ import com.google.gson.Gson
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private lateinit var json: String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        startUpdateService()
+
+        startUpdateService() //bind service - задания 1-3
         showTemperature(readJson(Links().apiLink()))
-        binding.downloadButton.setOnClickListener { download() }
+
+        binding.downloadButton.setOnClickListener { download() } //foreground service - задания 4-7
     }
 
     private fun showTemperature(json: String) {
