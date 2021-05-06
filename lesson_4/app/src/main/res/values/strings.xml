@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">lesson_4</string>
+    <string name="dialog_text">В данном окне выводится информация по нажатию на знак вопроса</string>
+    <string name="on_item_click">\"Выбран элемент: \"</string>
+    <string name="home_toast">Тост домику</string>
+    <string name="dialog_tag">myDialog</string>
+    <string name="info_title">Информация</string>
+    <string name="close">Закрыть окно</string>
+    <string name="exception_null">Activity cannot be null</string>
+    <string name="app_title">Моя квартира</string>
+</resources>
