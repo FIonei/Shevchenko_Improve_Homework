@@ -43,7 +43,7 @@
                 android:layout_marginStart="@dimen/base_margin_start"
                 android:layout_marginTop="@dimen/text_data_marginTop"
                 android:textColor="@color/squash"
-                android:textSize="14sp"
+                android:textSize="@dimen/little_textSize"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="Личные данные" />
@@ -55,7 +55,7 @@
                 android:layout_marginStart="@dimen/constraint_exit_text_marginStart"
                 android:layout_marginTop="@dimen/exit_text_marginTop"
                 android:textColor="@color/greyish_brown"
-                android:textSize="16sp"
+                android:textSize="@dimen/normal_textSize"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/row5"
                 tools:text="Выйти из аккаунта" />

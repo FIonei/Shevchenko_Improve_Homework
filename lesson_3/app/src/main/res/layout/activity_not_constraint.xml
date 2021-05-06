@@ -22,7 +22,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="@dimen/text_data_marginTop"
         android:textColor="@color/squash"
-        android:textSize="14sp"
+        android:textSize="@dimen/little_textSize"
         tools:text="Личные данные" />
 
     <ScrollView
@@ -87,7 +87,7 @@
                     android:layout_marginStart="@dimen/linear_exit_button_marginStart"
                     android:layout_marginTop="@dimen/exit_text_marginTop"
                     android:textColor="@color/greyish_brown"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/normal_textSize"
                     tools:text="Выйти из аккаунта" />
             </LinearLayout>
         </LinearLayout>

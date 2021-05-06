@@ -23,4 +23,5 @@
     <string name="toast_exit">Выход</string>
     <string name="toast_back">Вернуться на предыдущий экран</string>
     <string name="toast_edit_profile">Редактировать профиль</string>
+    <string name="title">Личный профиль</string>
 </resources>

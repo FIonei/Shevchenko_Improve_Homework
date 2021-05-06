@@ -77,5 +77,5 @@ class NotConstraintActivity : AppCompatActivity() {
     }
 
     private fun showText(s: String) =
-            Toast.makeText(binding.root.context, s, Toast.LENGTH_SHORT).show()
+        Toast.makeText(binding.root.context, s, Toast.LENGTH_SHORT).show()
 }
