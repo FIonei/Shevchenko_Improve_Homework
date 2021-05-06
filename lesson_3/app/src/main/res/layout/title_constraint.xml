@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/title_width"
+    android:layout_height="@dimen/title_height"
+    android:background="@color/sunflower">
+
+    <ImageButton
+        android:id="@+id/titleBack"
+        android:layout_width="@dimen/image_width"
+        android:layout_height="@dimen/image_height"
+        android:layout_marginStart="@dimen/base_margin_start"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/ic_arrow_back_black_24_px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/image_marginTop">
+
+    </ImageButton>
+
+    <ImageButton
+        android:id="@+id/title_edit"
+        android:layout_width="@dimen/image_width"
+        android:layout_height="@dimen/image_height"
+        android:layout_marginEnd="@dimen/image_marginEnd"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/ic_edit_black_24_px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/image_marginTop">
+
+    </ImageButton>
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        android:textColor="@color/greyish_brown"
+        android:textSize="@dimen/big_textSize"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/title_text_marginStart"
+        app:layout_constraintStart_toEndOf="@id/titleBack"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/image_marginTop">
+
+    </TextView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/base_margin_start"
+        android:layout_marginTop="@dimen/worker_marginTop"
+        android:layout_marginEnd="@dimen/worker_marginEnd"
+        android:layout_marginBottom="@dimen/worker_marginBottom"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/imageWorker"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/base_margin_start"
+            android:layout_marginTop="@dimen/worker_image_margin"
+            android:layout_marginBottom="@dimen/worker_image_margin"
+            android:scaleType="center"
+            android:src="@mipmap/img_profile_spechialist"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/textWorker"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/worker_text_height"
+            android:layout_marginStart="@dimen/worker_text_marginStart"
+            android:textColor="@color/greyish_brown"
+            android:textSize="@dimen/normal_textSize"
+            app:layout_constraintBottom_toBottomOf="@id/imageWorker"
+            app:layout_constraintStart_toEndOf="@id/imageWorker"
+            tools:text="работник года" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

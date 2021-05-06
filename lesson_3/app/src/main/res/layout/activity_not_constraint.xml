@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".NotConstraintActivity">
+
+    <include
+        layout="@layout/title"
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height">
+    </include>
+
+    <TextView
+        android:id="@+id/textHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/text_data_marginTop"
+        android:textColor="@color/squash"
+        android:textSize="@dimen/little_textSize"
+        tools:text="Личные данные" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/row1"
+                layout="@layout/linear_text_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="auto" />
+
+            <include
+                android:id="@+id/row2"
+                layout="@layout/linear_text_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                android:id="@+id/row3"
+                layout="@layout/linear_text_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                android:id="@+id/row4"
+                layout="@layout/linear_text_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                android:id="@+id/row5"
+                layout="@layout/linear_text_text_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/imageExit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/base_margin_start"
+                    android:layout_marginTop="@dimen/exit_button_marginTop"
+                    app:srcCompat="@drawable/ic_menu_exit"
+                    tools:ignore="ContentDescription"
+                    android:background="?attr/selectableItemBackground" />
+
+                <TextView
+                    android:id="@+id/exitText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/linear_exit_button_marginStart"
+                    android:layout_marginTop="@dimen/exit_text_marginTop"
+                    android:textColor="@color/greyish_brown"
+                    android:textSize="@dimen/normal_textSize"
+                    tools:text="Выйти из аккаунта" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
